@@ -10,7 +10,7 @@ import net.dv8tion.jda.core.hooks.EventListener;
 import java.util.Random;
 
 public class BotListener implements EventListener{
-    Random rand = new Random();
+
     @Override
     public void onEvent(Event event){
         System.out.println(event.getClass().getSimpleName());
@@ -39,24 +39,32 @@ public class BotListener implements EventListener{
             return;
         }
 
-        if(event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_WRITE) && message.startsWith("wubbalubbadubdub")){
+        if(event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_WRITE) && message.startsWith("tite")){
+            Random rand = new Random();
             int  n = rand.nextInt(5) + 1;
             //Max: 5 Min: 1
 
             switch(n){
                 case 1:
-                    event.getTextChannel().sendMessage("You caught **GELICO**! " +
+                    event.getTextChannel().sendMessage("**" + event.getAuthor().getName()  + "** spawned **GELICO**! " +
                             "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/gelico.png").complete();
                     break;
                 case 2:
-                    event.getTextChannel().sendMessage("You caught **MIKEE**! " +
+                    event.getTextChannel().sendMessage("**" + event.getAuthor().getName()  + "** spawned **MIKEE**! " +
                             "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/mikee.png").complete();
                     break;
                 case 3:
-                    event.getTextChannel().sendMessage("You caught **CHARLES**! " +
-                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/mikee.png").complete();
+                    event.getTextChannel().sendMessage("**" + event.getAuthor().getName()  + "** spawned **CHARLES**! " +
+                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/charles.png").complete();
                     break;
-                case 4: 
+                case 4:
+                    event.getTextChannel().sendMessage("**" + event.getAuthor().getName()  + "** spawned **JASPER**! " +
+                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/jasper.png").complete();
+                    break;
+                case 5:
+                    event.getTextChannel().sendMessage("**" + event.getAuthor().getName()  + "** spawned **YO**! " +
+                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/yo.png").complete();
+                    break;
             }
 
         }
