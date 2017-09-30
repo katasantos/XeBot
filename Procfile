@@ -1,1 +1,1 @@
-web: java -jar out/artifacts/XeBot_jar/XeBot.jar
+web: java -jar XeBot.jar
