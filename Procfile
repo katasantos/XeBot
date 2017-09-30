@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* BotDiscord
+web: java -cp target/classes/;target/dependency/* main.java.BotDiscord
