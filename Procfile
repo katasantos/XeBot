@@ -1,1 +1,1 @@
-web: java -cp target/classes/;target/dependency/* main.java.BotDiscord
+web: java -jar out/artifacts/XeBot_jar/XeBot.jar
