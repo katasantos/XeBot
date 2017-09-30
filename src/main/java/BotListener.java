@@ -40,8 +40,25 @@ public class BotListener implements EventListener{
         }
 
         if(event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_WRITE) && message.startsWith("wubbalubbadubdub")){
-            int  n = rand.nextInt(3) + 1;
-            event.getTextChannel().sendMessage("http://google.com").complete();
+            int  n = rand.nextInt(5) + 1;
+            //Max: 5 Min: 1
+
+            switch(n){
+                case 1:
+                    event.getTextChannel().sendMessage("You caught **GELICO**! " +
+                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/gelico.png").complete();
+                    break;
+                case 2:
+                    event.getTextChannel().sendMessage("You caught **MIKEE**! " +
+                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/mikee.png").complete();
+                    break;
+                case 3:
+                    event.getTextChannel().sendMessage("You caught **CHARLES**! " +
+                            "https://raw.githubusercontent.com/katasantos/XeBot/master/src/resources/mikee.png").complete();
+                    break;
+                case 4: 
+            }
+
         }
     }
 
