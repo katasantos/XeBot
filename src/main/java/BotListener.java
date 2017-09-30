@@ -39,7 +39,7 @@ public class BotListener implements EventListener{
             return;
         }
 
-        if(event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_WRITE) && message.startsWith("tite")){
+        if(event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_WRITE) && message.startsWith("!spawn")){
             Random rand = new Random();
             int  n = rand.nextInt(5) + 1;
             //Max: 5 Min: 1
