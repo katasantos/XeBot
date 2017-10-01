@@ -1,1 +1,1 @@
-web: java -jar XeBot.jar
+web: java -cp target/classes:target/dependency/* main.java.BotDiscord
